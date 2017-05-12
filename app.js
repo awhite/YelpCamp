@@ -12,6 +12,8 @@ var express         = require('express'),
 const campgroundRoutes  = require('./routes/campgrounds'),
       commentRoutes     = require('./routes/comments'),
       indexRoutes       = require('./routes/index');
+      
+const DATABASE_URL = process.end.DATABASE_URL || 'mongodb://localhost/yelp_camp';
 
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.DATABASE_URL);
